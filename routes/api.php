@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RolesController;
 
+// Rutas protegidas por el middleware 'auth:sanctum'
 Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('roles')->group(function () {
         Route::get('/', [RolesController::class, 'index']); // Obtener todos los roles
