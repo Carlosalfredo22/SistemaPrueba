@@ -2,7 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\MetodoPagoController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\PagoController;
@@ -20,7 +20,7 @@ Route::middleware(['auth:sanctum','role:admin'])->group(function () {
 
     //RUTAS API:
     //ruta categoria.
-    Route::resource('categorias', CategoryController::class);
+    Route::resource('categorias', CategoriaController::class);
     //agregar la ruta de metodo pago
     Route::resource('metodos-pago', MetodoPagoController::class);
     //agregar la ruta de producto
